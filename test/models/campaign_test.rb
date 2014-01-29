@@ -10,10 +10,6 @@ class CampaignTest < ActiveSupport:: TestCase
     @wrong_campaign_name =  "€€€€"
   end
 
-  test 'truth' do
-    assert true
-  end
-
   test 'validate a valid campaign name' do
   	campaign = Campaign.new(@right_campaign_name)
   	campaign.valid?
