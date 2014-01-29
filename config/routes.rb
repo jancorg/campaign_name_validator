@@ -1,4 +1,6 @@
 CampaignNameValidator::Application.routes.draw do
+  get "validation/index"
+  get "validation/validate"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
