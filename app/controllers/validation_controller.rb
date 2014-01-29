@@ -13,4 +13,4 @@ class ValidationController < ApplicationController
 
     render :validate
   end
-end
+end 
