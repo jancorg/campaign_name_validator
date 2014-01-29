@@ -7,14 +7,15 @@ class ValidationController < ApplicationController
   end
 
   def validate
-    campaign_name = params[:name]                                                                                                                                                                                                            
+    campaign_name = params[:name]
     campaign = Campaign.new(campaign_name)                                                                                                                                                                                                   
-    if campaign.valid?                                                                                                                                                                                                                       
-      @result = "Valid Name"
+    
+    if  campaign.valid? 
+      @result = "Valid!"                                                                                           
       render :validate                                                                                                                                                                                                      
-    else                                                                                                                                                                                                                                     
-      @result = "Invalid Name"  
-      render :validate, :bad_request                                                                                                                                                                                                       
+    else
+      @result = "Not valid :("                                                                                           	
+      render :validate, :status => :bad_request                                                                                                                                                                                                       
     end                                                                                                                                                                                                                                      
   end
 

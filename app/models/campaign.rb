@@ -10,4 +10,9 @@ class Campaign
   def initialize(name)
     @name = name
   end
+
+#  def sanitize(name)
+#    require 'iconv'
+#    Iconv.conv('ASCII//IGNORE', 'UTF8', name)
+#  end
 end

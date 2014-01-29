@@ -1,6 +1,8 @@
 class AsciiStringValidator < ActiveModel::EachValidator
-  @regex= /[\x00-\x7F]+/ # just for test, should change
   def validate_each(record, attribute, value)
-    record.errors.add :name, "has non asscii chars" if value =~ @regex
+  	Rails.logger = Logger.new(STDOUT)
+    Rails.logger = Log4r::Logger.new( "El valor de lo huevos es " + value)
+    #record.errors.add :name, "has non asscii chars" unless value.ascii_only?
+    value.ascii_only?
   end
 end

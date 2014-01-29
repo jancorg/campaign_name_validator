@@ -1,12 +1,13 @@
+# -*- coding: utf-8 -*-
 require 'test_helper' 
-#require 'validator.rb'
+require 'validator.rb'
 
 class ValidationControllerTest < ActionController::TestCase
 
   setup do
      # TODO: consider to use fixtures
-     @right_campaign_name = 'interview'
-     @wrong_campaign_name = 'not really wrong' # '¬½€ł'
+     @right_campaign_name = "interview"
+     @wrong_campaign_name = "€€€€"
   end
 
   test "should get index" do
@@ -21,7 +22,7 @@ class ValidationControllerTest < ActionController::TestCase
 
   test "should invalidate wrong campaign name" do
     post :validate, :name => @wrong_campaign_name
-      assert_response 400
+    assert_response 400
    end
   
 end
