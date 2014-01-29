@@ -1,8 +1,7 @@
-<h1>validation#index</h1>
-
+<h1>VALIDATION</h1>
+<h2>checks for full ascii strings</h2>
 <%= form_tag("/validation/validate", method: "post") do %>
   <%= label_tag(:name, "Insert an ascii name:") %>
   <%= text_field_tag(:name) %>
   <%= submit_tag("Validate!") %>
 <% end %>
-

@@ -7,7 +7,7 @@ class ValidationControllerTest < ActionController::TestCase
   setup do
      # TODO: consider to use fixtures
      @right_campaign_name = "interview"
-     @wrong_campaign_name = "€€€€"
+     @wrong_campaign_name = "€€€€→↓←ŧđ¶ð"
   end
 
   test "should get index" do
@@ -24,5 +24,7 @@ class ValidationControllerTest < ActionController::TestCase
     post :validate, :name => @wrong_campaign_name
     assert_response 400
    end
+  
+
   
 end
