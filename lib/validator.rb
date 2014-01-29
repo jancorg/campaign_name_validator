@@ -1,3 +1,4 @@
+
 class CampaignNameValidator < ActiveModel::EachValidator
   
   @regex= /[\x00-\x7F]+/ # just for test, should change
@@ -7,4 +8,3 @@ class CampaignNameValidator < ActiveModel::EachValidator
   end
  
 end
-
