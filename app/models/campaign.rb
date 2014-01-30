@@ -1,6 +1,6 @@
 require "active_model"
 require "active_support/core_ext"
-require "validator.rb"
+require "ascii_string_validator"
 
 class Campaign
   include ActiveModel::Validations

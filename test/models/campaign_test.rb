@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 require 'test_helper'
-require 'validator.rb'
+require 'ascii_string_validator'
 
 class CampaignTest < ActiveSupport::TestCase
   setup do

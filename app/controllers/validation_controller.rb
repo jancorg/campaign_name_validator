@@ -1,4 +1,4 @@
-require 'validator.rb'
+require 'ascii_string_validator.rb'
 require 'campaign.rb'
 
 class ValidationController < ApplicationController
@@ -11,10 +11,10 @@ class ValidationController < ApplicationController
     campaign      = Campaign.new(campaign_name)                                                                                                                                                                                                   
     
     if  campaign.valid?
-      @result     = "Valid!"
+      @result     = "valid!"
       render :validate
     else
-      @result     = "Not valid :("
+      @result     = "not valid :("
       render :validate, :status => :bad_request
     end
   end
