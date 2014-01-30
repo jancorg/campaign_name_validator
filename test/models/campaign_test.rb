@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-
 require 'test_helper'
 require 'ascii_string_validator'
 
 class CampaignTest < ActiveSupport::TestCase
+
   setup do
     # TODO: consider to use fixtures
     @right_campaign_name = "interview"
